@@ -1,9 +1,15 @@
-function App() {
-  return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
-  );
+import Home from '@/pages/home';
+import { RouteObject, useRoutes } from 'react-router';
+
+function Routers() {
+  const routes: RouteObject[] = [
+    {
+      path: '/',
+      element: <Home />,
+    },
+  ];
+  const element = useRoutes(routes);
+  return element;
 }
 
-export default App;
+export default Routers;
