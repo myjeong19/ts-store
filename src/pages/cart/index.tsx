@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { Button } from '@/shared/shadcn-components/button';
+import { Button } from '@/shared/shadcn-ui';
 
 const Cart = () => (
   <div>
