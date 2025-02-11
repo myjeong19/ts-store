@@ -1,6 +1,6 @@
-import { applyTheme } from '@/widgets/navbar/lib';
 import { createStore } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { applyTheme } from '../lib/apply-theme';
 
 export type ThemeStoreState = 'light' | 'dark' | 'system';
 

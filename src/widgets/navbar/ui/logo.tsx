@@ -1,5 +1,5 @@
-import { LinkButton } from '@/shared/ui';
 import { Armchair } from 'lucide-react';
+import { LinkButton } from '@/shared/ui';
 
 export const Logo = () => {
   return (
