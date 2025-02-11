@@ -7,8 +7,6 @@ import Routers from '@/app/routers';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routers />
-    </BrowserRouter>
+    <Routers />
   </StrictMode>
 );
