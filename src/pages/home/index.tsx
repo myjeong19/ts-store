@@ -1,3 +1,3 @@
-const Home = () => <>Home</>;
+const Landing = () => <>Landing</>;
 
-export default Home;
+export default Landing;
