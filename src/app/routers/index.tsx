@@ -1,11 +1,11 @@
-import { RouterProvider, createBrowserRouter } from 'react-router';
+import { createBrowserRouter } from 'react-router';
 
 import { authRoutes } from './auth';
 import { productRoutes } from './product';
 
 import { HomeLayout } from '../layouts/home-layout';
 
-import Landing from '@/pages/home/landing';
+import Landing from '@/pages/landing';
 import Cart from '@/pages/cart';
 import About from '@/pages/about';
 import Checkout from '@/pages/checkout';
