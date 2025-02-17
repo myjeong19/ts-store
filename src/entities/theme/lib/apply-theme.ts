@@ -11,7 +11,6 @@ export const applyTheme = (theme: ThemeStoreState): void => {
     const systemTheme = window.matchMedia(SYSTEM_DARK_MEDIA).matches ? 'dark' : 'light';
     root.classList.add(systemTheme);
 
-    // 시스템 테마 변경 감지
     window.matchMedia(SYSTEM_DARK_MEDIA).addEventListener('change', e => {
       root.classList.remove(...THEME_CLASSES);
       root.classList.add(e.matches ? 'dark' : 'light');
