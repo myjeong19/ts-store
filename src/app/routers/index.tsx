@@ -5,49 +5,48 @@ import { productRoutes } from './product';
 
 import { HomeLayout } from '../layouts/home-layout';
 
-import Landing from '@/pages/home';
+import Landing from '@/pages/home/landing';
 import Cart from '@/pages/cart';
 import About from '@/pages/about';
 import Checkout from '@/pages/checkout';
 import Order from '@/pages/order';
 import Error from '@/pages/error';
 
-function Routers() {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <HomeLayout />,
-      errorElement: <Error />,
-      children: [
-        {
-          index: true,
-          element: <Landing />,
-          errorElement: <Error />,
-        },
-        ...productRoutes,
-        {
-          path: 'cart',
-          element: <Cart />,
-        },
-        {
-          path: 'about',
-          element: <About />,
-        },
-        {
-          path: 'checkout',
-          element: <Checkout />,
-        },
-        {
-          path: 'order',
-          element: <Order />,
-        },
-      ],
-    },
+import { loader as landingLoader } from '@/entities/product/api';
 
-    ...authRoutes,
-  ]);
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <HomeLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true,
+        element: <Landing />,
+        errorElement: <Error />,
+        loader: landingLoader,
+      },
+      ...productRoutes,
+      {
+        path: 'cart',
+        element: <Cart />,
+      },
+      {
+        path: 'about',
+        element: <About />,
+      },
+      {
+        path: 'checkout',
+        element: <Checkout />,
+      },
+      {
+        path: 'order',
+        element: <Order />,
+      },
+    ],
+  },
 
-  return <RouterProvider router={router} />;
-}
+  ...authRoutes,
+]);
 
-export default Routers;
+export default router;

@@ -3,6 +3,8 @@ import { isRouteErrorResponse, useRouteError } from 'react-router';
 
 const Error = () => {
   const error = useRouteError();
+  console.log(error);
+
   if (isRouteErrorResponse(error) && error.status === 404) {
     return (
       <main className="grid min-h-screen place-items-center px-8">
