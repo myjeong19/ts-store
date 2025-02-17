@@ -1,4 +1,4 @@
-import { LinkButton } from '@/shared/ui';
+import { ButtonLink } from '@/shared/ui';
 import { isRouteErrorResponse, useRouteError } from 'react-router';
 
 const Error = () => {
@@ -15,9 +15,9 @@ const Error = () => {
             Sorry, we could not find the page you're looking for.
           </p>
           <div className="mt-10">
-            <LinkButton to="/" variant="secondary" size="lg">
+            <ButtonLink to="/" variant="secondary" size="lg">
               Go back home
-            </LinkButton>
+            </ButtonLink>
           </div>
         </div>
       </main>

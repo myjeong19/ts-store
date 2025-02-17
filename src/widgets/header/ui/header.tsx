@@ -1,7 +1,7 @@
 import { Button } from '@/shared/shadcn-ui';
 
 import { useAuth } from '../model';
-import { LinkButton } from '@/shared/ui';
+import { ButtonLink } from '@/shared/ui';
 
 export const Header = () => {
   const { user, logoutHandler } = useAuth();
@@ -18,8 +18,8 @@ export const Header = () => {
           </div>
         ) : (
           <div className="flex gap-x-6 justify-center items-center -mr-4">
-            <LinkButton to="/login">Sign in / Guest</LinkButton>
-            <LinkButton to="/register">Register</LinkButton>
+            <ButtonLink to="/login">Sign in / Guest</ButtonLink>
+            <ButtonLink to="/register">Register</ButtonLink>
           </div>
         )}
       </div>

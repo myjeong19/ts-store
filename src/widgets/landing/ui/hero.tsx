@@ -1,4 +1,4 @@
-import { LinkButton } from '@/shared/ui';
+import { ButtonLink } from '@/shared/ui';
 import { HeroCarousel } from './hero-carousel';
 
 export const Hero = () => {
@@ -12,9 +12,9 @@ export const Hero = () => {
           "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
           velit..."
         </p>
-        <LinkButton variant="default" size="lg" className="mt-10" to="/products">
+        <ButtonLink variant="default" size="lg" className="mt-10" to="/products">
           Our Products
-        </LinkButton>
+        </ButtonLink>
       </div>
       <HeroCarousel />
     </section>
