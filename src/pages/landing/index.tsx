@@ -1,5 +1,6 @@
 import { ProductsResponse } from '@/entities/product/types';
 import { Products } from '@/features/products/ui';
+import { Hero } from '@/widgets/landing/ui';
 import { useLoaderData } from 'react-router';
 
 const Landing = () => {
@@ -8,6 +9,7 @@ const Landing = () => {
 
   return (
     <>
+      <Hero />
       <Products />
     </>
   );
