@@ -13,7 +13,7 @@ export const ProductsList = () => {
         const dollarsAmount = formatAsDollars(price);
 
         return (
-          <Link key={id} to={`products/${id}`}>
+          <Link key={id} to={String(id)}>
             <Card>
               <CardContent className="p-8 gap-y-4 grid md:grid-cols-3">
                 <img

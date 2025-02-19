@@ -13,7 +13,7 @@ export const ProductsGrid = () => {
         const dollarsAmount = formatAsDollars(price);
 
         return (
-          <Link key={id} to={`products/${id}`}>
+          <Link key={id} to={String(id)}>
             <Card>
               <CardContent className="p-4">
                 <img src={image} alt={title} className="md:h-48 w-full rounded-md object-cover" />
