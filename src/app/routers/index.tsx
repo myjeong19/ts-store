@@ -12,7 +12,7 @@ import Checkout from '@/pages/checkout';
 import Order from '@/pages/order';
 import Error from '@/pages/error';
 
-import { loader as landingLoader } from '@/entities/product/api';
+import { landingLoader } from '@/entities/product/api';
 
 const router = createBrowserRouter([
   {
