@@ -1,4 +1,4 @@
-import { ProductsContainer } from '@/features/products-view/ui';
+import { ProductsContainer } from '@/features/products/ui';
 
 const Products = () => (
   <>

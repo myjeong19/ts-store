@@ -1,6 +1,6 @@
 import { useLoaderData } from 'react-router';
 import { LayoutGrid, List } from 'lucide-react';
-import { useLayout } from '@/features/products-view/model';
+import { useLayout } from '@/features/products/model';
 
 import { Button, Separator } from '@/shared/shadcn-ui';
 import type { ProductsResponse } from '@/shared/types';
