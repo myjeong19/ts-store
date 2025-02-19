@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router';
 import { authRoutes } from './auth';
 import { productRoutes } from './product';
 
-import { HomeLayout } from '../layouts/home-layout';
+import { HomeLayout } from '../layouts';
 
 import Landing from '@/pages/landing/ui';
 import Cart from '@/pages/cart';

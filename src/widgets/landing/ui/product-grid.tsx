@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from 'react-router';
 import { Card, CardContent } from '@/shared/shadcn-ui';
-import { formatAsDollars } from '../lib';
+import { formatAsDollars } from '@/entities/product/lib';
 import type { ProductsResponse } from '@/shared/types';
 
 export const ProductGrid = () => {

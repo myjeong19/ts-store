@@ -1,5 +1,4 @@
-import { Products } from '@/features/products/ui';
-import { Hero } from '@/widgets/landing/ui';
+import { Products, Hero } from '@/widgets/landing/ui';
 
 const Landing = () => (
   <>
