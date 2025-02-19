@@ -5,14 +5,14 @@ import { productRoutes } from './product';
 
 import { HomeLayout } from '../layouts/home-layout';
 
-import Landing from '@/pages/landing';
+import Landing from '@/pages/landing/ui';
 import Cart from '@/pages/cart';
 import About from '@/pages/about';
 import Checkout from '@/pages/checkout';
 import Order from '@/pages/order';
 import Error from '@/pages/error';
 
-import { landingLoader } from '@/entities/product/api';
+import { loader as landingLoader } from '@/pages/landing/api/loader';
 
 const router = createBrowserRouter([
   {
