@@ -4,3 +4,8 @@ export * from './separator';
 export * from './card';
 export * from './carousel';
 export * from './skeleton';
+export * from './input';
+export * from './select';
+export * from './label';
+export * from './checkbox';
+export * from './slider';
