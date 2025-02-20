@@ -9,3 +9,4 @@ export * from './select';
 export * from './label';
 export * from './checkbox';
 export * from './slider';
+export * from './pagination';

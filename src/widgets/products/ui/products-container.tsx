@@ -1,12 +1,11 @@
 import { useLoaderData } from 'react-router';
 import { LayoutGrid, List } from 'lucide-react';
-import { useLayout } from '@/features/products/model';
+import { useLayout } from '@/features/product-layout/model';
 
 import { Button, Separator } from '@/shared/shadcn-ui';
 import type { ProductsResponse } from '@/shared/types';
 
-import { ProductsList } from './products-list';
-import { ProductsGrid } from './products-grid';
+import { ProductsList, ProductsGrid } from '@/features/product-layout/ui';
 
 export const ProductsContainer = () => {
   const { meta } = useLoaderData() as ProductsResponse;

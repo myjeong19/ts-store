@@ -1,6 +1,6 @@
 import type { LoaderFunction } from 'react-router';
 import type { ProductsResponse } from '@/shared/types/response';
-import type { ProductResponseWithParams } from '@/features/products/types';
+import type { ProductResponseWithParams } from '@/features/product-filters/types';
 
 import { customFetch } from '@/shared/api';
 
