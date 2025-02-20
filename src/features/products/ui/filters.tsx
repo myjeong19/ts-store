@@ -1,8 +1,7 @@
 import { Form, useLoaderData } from 'react-router';
 import { Button } from '@/shared/shadcn-ui';
-import { ButtonLink, FormInput } from '@/shared/ui';
+import { ButtonLink, FormInput, FormRange, FormSelect } from '@/shared/ui';
 import type { ProductResponseWithParams } from '../types';
-import { FormSelect } from '@/shared/ui/form-select';
 
 export const Filters = () => {
   const {
@@ -27,6 +26,7 @@ export const Filters = () => {
         defaultValue={company}
       />
       <FormSelect label="Select order" name="order" options={['a-z', 'z-a']} defaultValue={order} />
+      <FormRange label="price" name="price" defaultValue={price} step={1000} max={100000} />
       <Button type="submit" size="sm" className="self-end mb-2">
         Search
       </Button>
