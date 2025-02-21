@@ -4,9 +4,9 @@ import { formatAsDollars } from '@/entities/product/lib';
 import { useState } from 'react';
 import { ButtonLink } from '@/shared/ui';
 import { Button, Separator } from '@/shared/shadcn-ui';
-import { SelectAmount, SelectColor } from '@/features/product-purchase/ui';
+import { SelectAmount, SelectColor } from '@/entities/product-purchase/ui';
 
-import { Mode } from '@/features/product-purchase/ui';
+import { Mode } from '@/entities/product-purchase/ui';
 
 const SingleProduct = () => {
   const {
