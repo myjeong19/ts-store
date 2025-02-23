@@ -11,7 +11,6 @@ export const CartTotals = () => {
       <CartTotalRow label="Subtotal" amount={cartTotal} />
       <CartTotalRow label="Shipping" amount={shipping} />
       <CartTotalRow label="Tax" amount={tax} />
-      <CartTotalRow label="Total" amount={orderTotal} lastRow />
       <CardTitle className="mt-8">
         <CartTotalRow label="Order Total" amount={orderTotal} lastRow />
       </CardTitle>
