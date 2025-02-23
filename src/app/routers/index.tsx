@@ -6,7 +6,7 @@ import { productRoutes } from './product';
 import { HomeLayout } from '../layouts';
 
 import Landing from '@/pages/landing/ui';
-import Cart from '@/pages/cart';
+import Cart from '@/pages/cart/ui';
 import About from '@/pages/about';
 import Checkout from '@/pages/checkout';
 import Order from '@/pages/order';
