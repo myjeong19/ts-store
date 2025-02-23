@@ -91,19 +91,20 @@ export const cartStore = createStore<CartState>()(
 
       editItem: (cartId: string, amount: number) =>
         set(({ cart, ...state }) => {
-          const updatedItems = [...cart.cartItems];
-          const itemToEdit = updatedItems.find(item => item.cartId === cartId);
+          const cartItem = cart.cartItems.find(item => item.cartId === cartId);
 
-          if (!itemToEdit) return { cart, ...state };
-
-          const amountDiff = amount - itemToEdit.amount;
-          itemToEdit.amount = amount;
+          if (!cartItem) return { cart, ...state };
 
           const updatedCart = {
             ...cart,
-            cartItems: updatedItems,
-            numItemsInCart: cart.numItemsInCart + amountDiff,
-            cartTotal: cart.cartTotal + Number(itemToEdit.price) * amountDiff,
+            cartItems: cart.cartItems.map(item =>
+              item.cartId === cartId ? { ...item, amount } : item
+            ),
+            numItemsInCart: cart.cartItems.reduce(
+              (total, item) => (item.cartId === cartId ? total + amount : total + item.amount),
+              0
+            ),
+            cartTotal: Number(cartItem.price) * (amount - cartItem.amount) + cart.cartTotal,
           };
 
           const updatedState = {
