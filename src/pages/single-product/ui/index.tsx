@@ -8,9 +8,12 @@ import { SelectAmount, SelectColor } from '@/entities/product-purchase/ui';
 
 import { Mode } from '@/entities/product-purchase/ui';
 
+import { useCartActions, useCartState } from '@/entities/cart/model';
+
 const SingleProduct = () => {
   const {
     data: {
+      id,
       attributes: { image, title, price, description, colors, company },
     },
   } = useLoaderData() as SingleProductResponse;
@@ -19,9 +22,19 @@ const SingleProduct = () => {
   const [productColor, setProductColor] = useState(colors[0]);
   const [amount, setAmount] = useState(1);
 
-  const addToCart = () => {
-    console.log('add to cart');
-  };
+  const { addItem } = useCartActions();
+
+  const addToCart = () =>
+    addItem({
+      cartId: id + productColor,
+      productId: id.toString(),
+      image,
+      title,
+      price,
+      amount,
+      productColor,
+      company,
+    });
 
   return (
     <section>
