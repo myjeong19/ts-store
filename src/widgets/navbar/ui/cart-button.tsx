@@ -3,7 +3,7 @@ import { ButtonLink } from '@/shared/ui';
 import { ShoppingCart } from 'lucide-react';
 
 export const CartButton = () => {
-  const { cartItemsCount } = useCartState();
+  const { numItemsInCart } = useCartState();
 
   return (
     <ButtonLink
@@ -14,7 +14,7 @@ export const CartButton = () => {
     >
       <ShoppingCart />
       <span className="absolute -top-3 -right-3 bg-primary text-white rounded-full h-6 w-6 flex items-center justify-center text-xs">
-        {cartItemsCount}
+        {numItemsInCart}
       </span>
     </ButtonLink>
   );
